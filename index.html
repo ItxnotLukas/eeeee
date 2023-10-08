@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="de">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi8MbtRJRj2kAmMgS3XNowS965jiPTEJq_7ah5XgUQWd1LyBCP2Sr9xxU8Pv7N51IRTzU&usqp=CAU" type="image/png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaktenParadies</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffcc00;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #333;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .fact {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Different background colors for each fact */
+        .fact-1 {
+            background-color: #ffea8c;
+        }
+
+        .fact-2 {
+            background-color: #ffc4a7;
+        }
+
+        .fact-3 {
+            background-color: #ffd7ea;
+        }
+
+        .fact-4 {
+            background-color: #c4ffaa;
+        }
+
+        .fact-5 {
+            background-color: #a3b9ff;
+        }
+
+        .fact-6 {
+            background-color: #ffccd8;
+        }
+
+        .fact-7 {
+            background-color: #f3ff99;
+        }
+
+        .fact-8 {
+            background-color: #ffdb96;
+        }
+
+        .fact-9 {
+            background-color: #ffc6ff;
+        }
+
+        .fact-10 {
+            background-color: #ffaaad;
+        }
+
+        .fact-11 {
+            background-color: #aaffcc;
+        }
+
+        .fact-12 {
+            background-color: #ffbb99;
+        }
+
+        .fact-13 {
+            background-color: #99ffbb;
+        }
+
+        .fact-14 {
+            background-color: #ff99c6;
+        }
+
+        .fact-15 {
+            background-color: #bbff99;
+        }
+
+        .fact-16 {
+            background-color: #aaffcc;
+        }
+
+        .fact-17 {
+            background-color: #ffdb96;
+        }
+
+        .fact-18 {
+            background-color: #ffc6ff;
+        }
+
+        .fact-19 {
+            background-color: #ffaaad;
+        }
+
+        .fact-20 {
+            background-color: #c4ffaa;
+        }
+
+        .fact-21 {
+            background-color: #ffd7ea;
+        }
+
+        .fact-22 {
+            background-color: #ffc4a7;
+        }
+
+        .fact-23 {
+            background-color: #ffea8c;
+        }
+
+        .fact-24 {
+            background-color: #a3b9ff;
+        }
+
+        .fact-25 {
+            background-color: #ffccd8;
+        }
+
+        /* Add different colors for the numbers after "#" */
+        .fact-1 h3::after {
+            content: "1";
+            color: red;
+        }
+
+        .fact-2 h3::after {
+            content: "2";
+            color: green;
+        }
+
+        .fact-3 h3::after {
+            content: "3";
+            color: blue;
+        }
+
+        .fact-4 h3::after {
+            content: "4";
+            color: purple;
+        }
+
+        .fact-5 h3::after {
+            content: "5";
+            color: orange;
+        }
+
+        .fact-6 h3::after {
+            content: "6";
+            color: teal;
+        }
+
+        .fact-7 h3::after {
+            content: "7";
+            color: brown;
+        }
+
+        .fact-8 h3::after {
+            content: "8";
+            color: indigo;
+        }
+
+        .fact-9 h3::after {
+            content: "9";
+            color: pink;
+        }
+
+        .fact-10 h3::after {
+            content: "10";
+            color: yellow;
+        }
+
+        .fact-11 h3::after {
+            content: "11";
+            color: magenta;
+        }
+
+        .fact-12 h3::after {
+            content: "12";
+            color: darkred;
+        }
+
+        .fact-13 h3::after {
+            content: "13";
+            color: darkgreen;
+        }
+
+        .fact-14 h3::after {
+            content: "14";
+            color: darkblue;
+        }
+
+        .fact-15 h3::after {
+            content: "15";
+            color: darkpurple;
+        }
+
+        .fact-16 h3::after {
+            content: "16";
+            color: darkorange;
+        }
+
+        .fact-17 h3::after {
+            content: "17";
+            color: paleturquoise;
+        }
+
+        .fact-18 h3::after {
+            content: "18";
+            color: brown;
+        }
+
+        .fact-19 h3::after {
+            content: "19";
+            color: yellowgreen;
+        }
+
+        .fact-20 h3::after {
+            content: "20";
+            color: red;
+        }
+
+        .fact-21 h3::after {
+            content: "21";
+            color: darkmagenta;
+        }
+
+        .fact-22 h3::after {
+            content: "22";
+            color: darkcyan;
+        }
+
+        .fact-23 h3::after {
+            content: "23";
+            color: darkolivegreen;
+        }
+
+        .fact-24 h3::after {
+            content: "24";
+            color: red;
+        }
+
+        .fact-25 h3::after {
+            content: "25";
+            color: green;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Inline styles for different colors in the footer text */
+        .footer-span {
+            color: red;
+        }
+
+        .footer-span-2 {
+            color: green;
+        }
+
+        .footer-span-3 {
+            color: blue;
+        }
+
+        .footer-span-4 {
+            color: purple;
+        }
+
+        .footer-span-5 {
+            color: orange;
+        }
+
+        .footer-span-6 {
+            color: pink;
+        }
+
+        .footer-span-7 {
+            color: brown;
+        }
+
+        .footer-span-8 {
+            color: teal;
+        }
+
+        .footer-span-9 {
+            color: gray;
+        }
+
+        .footer-span-10 {
+            color: magenta;
+        }
+
+        .footer-span-11 {
+            color: cyan;
+        }
+
+        .footer-span-12 {
+            color: indigo;
+        }
+
+        .footer-span-13 {
+            color: yellow;
+        }
+
+        .footer-span-14 {
+            color: darkred;
+        }
+
+        .footer-span-15 {
+            color: darkgreen;
+        }
+
+        .footer-span-16 {
+            color: darkblue;
+        }
+
+        .footer-span-17 {
+            color: darkpurple;
+        }
+
+        .footer-span-18 {
+            color: darkorange;
+        }
+
+        .footer-span-19 {
+            color: yellowgreen;
+        }
+
+        .footer-span-20 {
+            color: darkbrown;
+        }
+
+        .footer-span-21 {
+            color: darkteal;
+        }
+
+        .footer-span-22 {
+            color: darkgray;
+        }
+
+        .footer-span-23 {
+            color: darkmagenta;
+        }
+
+        .footer-span-24 {
+            color: darkcyan;
+        }
+
+        .footer-span-25 {
+            color: darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Willkommen im FaktenParadies (Gemacht von Lukas)</h1>
+    </header>
+
+    <main>
+        <h2>Zufällige Fakten</h2>
+        <!-- 25 Random Facts with Different Colors -->
+        <div class="fact fact-1">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Die Erde hat mehr als 70% Wasserflächen.</p>
+        </div>
+
+        <div class="fact fact-2">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Honig kann nicht verderben. Es wurde sogar in ägyptischen Pyramiden gefunden und war noch essbar.</p>
+        </div>
+
+        <div class="fact fact-3">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Das Gehirn kann mehr Informationen speichern als alle Computer der Welt zusammen.</p>
+        </div>
+
+        <div class="fact fact-4">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Es gibt mehr Sterne im Universum als Sandkörner auf der Erde.</p>
+        </div>
+
+        <div class="fact fact-5">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Ein Pandabär frisst den ganzen Tag Bambus, aber er ist ein Raubtier.</p>
+        </div>
+
+        <div class="fact fact-6">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Die längste Zeit ohne Schlaf betrug 11 Tage.</p>
+        </div>
+
+        <div class="fact fact-7">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Die Nase hört nie auf zu wachsen.</p>
+        </div>
+
+        <div class="fact fact-8">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Ein Blauwalherz ist so groß, dass ein Mensch darin schwimmen könnte.</p>
+        </div>
+
+        <div class="fact fact-9">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Die längste Schlange der Welt war über 7 Meter lang.</p>
+        </div>
+
+        <div class="fact fact-10">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Das Summen einer Biene erzeugt mehr Vibrationen als ein Erdbeben.</p>
+        </div>
+
+        <div class="fact fact-11">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Es gibt mehr Plastikflamingos als echte Flamingos auf der Welt.</p>
+        </div>
+
+        <div class="fact fact-12">
+            <h3>Zufällige Tatsache #</h3>
+            <p>In Norwegen gibt es eine Stadt namens Hell.</p>
+        </div>
+
+        <div class="fact fact-13">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Einige Katzen sind allergisch gegen Menschen.</p>
+        </div>
+
+        <div class="fact fact-14">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Das längste Wort im Englischen ohne Vokale ist "rhythms".</p>
+        </div>
+
+        <div class="fact fact-15">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Die Wahrscheinlichkeit, von einem Blitz getroffen zu werden, ist höher als im Lotto zu gewinnen.</p>
+        </div>
+
+        <div class="fact fact-16">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Einige Vögel können rückwärts fliegen, wie der Kolibri.</p>
+        </div>
+
+        <div class="fact fact-17">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Eine Giraffe kann ohne Wasser länger leben als ein Kamel.</p>
+        </div>
+
+        <div class="fact fact-18">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Der Pazifische Ozean ist größer als alle Länder der Welt zusammen.</p>
+        </div>
+
+        <div class="fact fact-19">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Einige Schildkröten können durch den Po atmen.</p>
+        </div>
+
+        <div class="fact fact-20">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Ein Blitz ist sechsmal heißer als die Sonne.</p>
+        </div>
+
+        <div class="fact fact-21">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Die längste Zeit ohne Schlaf betrug 11 Tage.</p>
+        </div>
+
+        <div class="fact fact-22">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Die Nase hört nie auf zu wachsen.</p>
+        </div>
+
+        <div class="fact fact-23">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Ein Blauwalherz ist so groß, dass ein Mensch darin schwimmen könnte.</p>
+        </div>
+
+        <div class="fact fact-24">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Die längste Schlange der Welt war über 7 Meter lang.</p>
+        </div>
+
+        <div class="fact fact-25">
+            <h3>Zufällige Tatsache #</h3>
+            <p>Eine Kuh kann die Farben Rot und Grün unterscheiden.</p>
+        </div>
+    </main>
+
+    <footer>
+        <span class="footer-span">&copy;</span>
+        <span class="footer-span-2">2023</span>
+        <span class="footer-span-3">FaktenParadies</span>
+        <span class="footer-span-4">|</span>
+        <span class="footer-span-5">Made</span>
+        <span class="footer-span-6">with</span>
+        <span class="footer-span-7">Love</span>
+        <span class="footer-span-8">by</span>
+        <span class="footer-span-9">Lukas</span>
+        <span class="footer-span-10">|</span>
+        <span class="footer-span-11">Danke</span>
+        <span class="footer-span-12">das</span>
+        <span class="footer-span-13">du</span>
+        <span class="footer-span-14">hier</span>
+        <span class="footer-span-15">warst!</span>
+    </footer>
+</body>
+</html>
